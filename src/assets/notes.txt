@@ -1,0 +1,16 @@
+6 images for the work I have completed.
+
+Avatar image
+
+Styling for footer & header, not using images on these
+
+images for the clickable icons in the footer.
+
+Update about me bio, include relevant information
+
+Styling for portfolio elements. Grid Layout. Hover over.
+
+Styling for contact page.
+
+
+

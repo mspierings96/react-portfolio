@@ -1,19 +1,39 @@
-function Header(props) {
+function Header({ page, setPage }) {
   return (
     <div>
       <h1>Mitchell Spierings</h1>
       <nav>
         <div>
-          <a href="/about">About Me</a>
+          <btn
+            onClick={() => setPage("about")}
+            className={page === "about" && "active"}
+          >
+            About Me
+          </btn>
         </div>
         <div>
-          <a href="/portfolio">Portfolio</a>
+          <btn
+            onClick={() => setPage("portfolio")}
+            className={page === "portfolio" && "active"}
+          >
+            Portfolio
+          </btn>
         </div>
         <div>
-          <a href="/contact">Contact</a>
+          <btn
+            onClick={() => setPage("contact")}
+            className={page === "contact" && "active"}
+          >
+            Contact
+          </btn>
         </div>
         <div>
-          <a href="/resume">Resume</a>
+          <btn
+            onClick={() => setPage("resume")}
+            className={page === "resume" && "active"}
+          >
+            Resume
+          </btn>
         </div>
       </nav>
     </div>
