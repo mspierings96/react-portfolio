@@ -6,7 +6,9 @@ function Contact() {
     email: "",
     message: "",
   });
-  const [validEmail, setValidEmail] = useState(true);
+  // const [validEmail, setValidEmail] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage2, setErrorMessage2] = useState("");
   const { name, email, message } = formState;
   function isValidEmail(email) {
     const re =
@@ -14,46 +16,24 @@ function Contact() {
     return re.test(String(email).toLowerCase());
   }
   function updateFormState(e) {
-    if (e.target.name === "email") {
-      setValidEmail(isValidEmail(e.target.value));
-    }
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
     });
+    let error = "";
+    if (e.target.name === "email" && !isValidEmail(e.target.value)) {
+      // setValidEmail();
+      error = "Invalid Email";
+    }
+    setErrorMessage(error);
   }
   function checkEmpty(e) {
     if (!e.target.value) {
-      alert(e.target.name + " is required ");
+      setErrorMessage2(e.target.name + " is required ");
+    } else {
+      setErrorMessage2("");
     }
   }
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!errorMessage) {
-  //     console.log("Submit Form", formState);
-  //   }
-  // };
-
-  // const handleChange = (e) => {
-  //   if (e.target.name === "email") {
-  //     const isValid = validateEmail(e.target.value);
-  //     if (!isValid) {
-  //       setErrorMessage("Your email is invalid.");
-  //     } else {
-  //       setErrorMessage("");
-  //     }
-  //   } else {
-  //     if (!e.target.value.length) {
-  //       setErrorMessage(`${e.target.name} is required.`);
-  //     } else {
-  //       setErrorMessage("");
-  //     }
-  //   }
-  //   if (!errorMessage) {
-  //     setFormState({ ...formState, [e.target.name]: e.target.value });
-  //     console.log("Handle Form", formState);
-  //   }
-  // };
 
   return (
     <form>
@@ -76,9 +56,6 @@ function Contact() {
           onChange={updateFormState}
           onBlur={checkEmpty}
         />
-        <div style={{ display: validEmail ? "none" : "" }}>
-          Please Enter a Valid Email
-        </div>
       </div>
       <div>
         <label htmlFor="message">Message</label>
@@ -89,6 +66,7 @@ function Contact() {
           onBlur={checkEmpty}
         ></textarea>
       </div>
+      <div>{errorMessage === "" ? errorMessage2 : errorMessage}</div>
     </form>
   );
 }
