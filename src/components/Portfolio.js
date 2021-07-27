@@ -16,18 +16,26 @@ const projects = [
   {
     img: "https://via.placeholder.com/150",
     name: "Budget Tracker",
+    deployed: "https://shielded-waters-12008.herokuapp.com/",
+    repository: "https://github.com/mspierings96/budgettracker2",
   },
   {
     img: "https://via.placeholder.com/150",
-    name: "Coding Quiz",
+    name: "Work Day Scheduler",
+    deployed: "https://mspierings96.github.io/Workday-Scheduler-/",
+    repository: "https://github.com/mspierings96/Workday-Scheduler-",
   },
   {
     img: "https://via.placeholder.com/150",
     name: "Weather Dashboard",
+    deployed: "https://mspierings96.github.io/Weather-Dashboard/",
+    repository: "https://github.com/mspierings96/Weather-Dashboard",
   },
   {
     img: "https://via.placeholder.com/150",
-    name: "Note Taker",
+    name: "Password Generator",
+    deployed: "https://mspierings96.github.io/Password-Generator/",
+    repository: "https://github.com/mspierings96/Password-Generator",
   },
 ];
 
