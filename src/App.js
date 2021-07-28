@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import Header from "./components/Header";
 import About from "./components/About";
 import Resume from "./components/Resume";
@@ -12,7 +13,7 @@ import { useState } from "react";
 function App() {
   const [page, setPage] = useState("about");
   return (
-    <div>
+    <div style={{ backgroundColor: "aliceblue" }}>
       <Header page={page} setPage={setPage} />
       {page === "about" && <About />}
       {page === "contact" && <Contact />}

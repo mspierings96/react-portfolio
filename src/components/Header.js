@@ -1,9 +1,17 @@
 function Header({ page, setPage }) {
+  const styles = {
+    navItem: {
+      display: "inline-block",
+      margin: "2%",
+      color: "azure",
+      fontSize: "21px",
+    },
+  };
   return (
-    <div>
+    <div className="header">
       <h1>Mitchell Spierings</h1>
-      <nav>
-        <div>
+      <nav style={{ width: "19%" }}>
+        <div style={styles.navItem}>
           <btn
             onClick={() => setPage("about")}
             className={page === "about" && "active"}
@@ -11,7 +19,7 @@ function Header({ page, setPage }) {
             About Me
           </btn>
         </div>
-        <div>
+        <div style={styles.navItem}>
           <btn
             onClick={() => setPage("portfolio")}
             className={page === "portfolio" && "active"}
@@ -19,7 +27,7 @@ function Header({ page, setPage }) {
             Portfolio
           </btn>
         </div>
-        <div>
+        <div style={styles.navItem}>
           <btn
             onClick={() => setPage("contact")}
             className={page === "contact" && "active"}
@@ -27,7 +35,7 @@ function Header({ page, setPage }) {
             Contact
           </btn>
         </div>
-        <div>
+        <div style={styles.navItem}>
           <btn
             onClick={() => setPage("resume")}
             className={page === "resume" && "active"}

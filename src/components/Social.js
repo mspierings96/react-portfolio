@@ -1,8 +1,17 @@
 function Social(props) {
+  const styles = {
+    footerItem: {
+      display: "inline-block",
+      margin: "2%",
+      color: "azure",
+      fontSize: "31px",
+    },
+  };
+
   return (
-    <div>
+    <div style={styles.footerItem}>
       <a href={props.link}>
-        <img src={props.img} alt="Social Photo" />
+        <p> {props.URL}</p>
       </a>
     </div>
   );

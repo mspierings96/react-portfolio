@@ -35,11 +35,23 @@ function Contact() {
     }
   }
 
+  const styles = {
+    labels: {
+      fontSize: "50px",
+    },
+    inputs: {
+      height: "55px",
+      width: "200px",
+    },
+  };
   return (
-    <form>
+    <form style={{ textAlign: "center" }}>
       <div>
-        <label htmlFor="name">Name</label>
+        <label style={styles.labels} htmlFor="name">
+          Name
+        </label>
         <input
+          style={styles.inputs}
           type="text"
           name="name"
           value={name}
@@ -48,8 +60,11 @@ function Contact() {
         />
       </div>
       <div>
-        <label htmlFor="email">Email</label>
+        <label style={styles.labels} htmlFor="email">
+          Email
+        </label>
         <input
+          style={styles.inputs}
           type="email"
           name="email"
           value={email}
@@ -58,8 +73,11 @@ function Contact() {
         />
       </div>
       <div>
-        <label htmlFor="message">Message</label>
+        <label style={styles.labels} htmlFor="message">
+          Message
+        </label>
         <textarea
+          style={styles.inputs}
           name="message"
           value={message}
           onChange={updateFormState}
