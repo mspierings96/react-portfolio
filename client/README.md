@@ -16,7 +16,7 @@ This website serves a look into the various projects & sites I have completed, r
 * React
 
 ## Website
-https://mspierings96.github.io/react-portfolio/
+
 
 ## Git Repo Link
 https://github.com/mspierings96/react-portfolio
