@@ -26,10 +26,10 @@ const projects = [
     repository: "https://github.com/mspierings96/Workday-Scheduler-",
   },
   {
-    img: "/images/weatherdashboard.jpg",
-    name: "Weather Dashboard",
-    deployed: "https://mspierings96.github.io/Weather-Dashboard/",
-    repository: "https://github.com/mspierings96/Weather-Dashboard",
+    img: "/images/bustedbracket.jpg",
+    name: "Busted Brackets",
+    deployed: "https://limitless-wildwood-05739.herokuapp.com/",
+    repository: "https://github.com/adamlsn/busted-brackets",
   },
   {
     img: "/images/Passwordgenerator.jpg",
